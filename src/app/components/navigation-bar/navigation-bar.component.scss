@@ -1,0 +1,40 @@
+.navContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2.5rem 1rem 2.5rem;
+  background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5));
+
+  .logo span{
+    font-size: 1.45em;
+    font-weight: 600;
+    color: white;
+
+    .accentText {
+      color: #3790E9;
+    }
+  }
+
+  .navLinks {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .navItems {
+      list-style-type: none;
+      overflow: hidden;
+      margin-right: 1.5rem;
+      li {
+        float: left;
+
+        a {
+          text-decoration: none;
+          color: white;
+          padding: 0.5rem;
+        }
+      }
+    }
+  }
+}
