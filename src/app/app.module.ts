@@ -8,11 +8,13 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {ModalsModule} from './components/modals/modals.module';
 import {MainPointsModule} from './components/main-points/main-points.module';
 import { AboutPreviewComponent } from './components/about-preview/about-preview.component';
+import { ProductsComponent } from './components/products/products.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AboutPreviewComponent
+    AboutPreviewComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,
