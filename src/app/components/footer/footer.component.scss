@@ -1,0 +1,113 @@
+:host {
+    align-self: flex-end;
+}
+
+.container {
+  height: fit-content;
+  background-image: url(assets/untitled-2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  //backdrop-filter: blur(30px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 3rem 0 0 0;
+
+  .wrapper {
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 0.625rem 0.625rem 0 0 ;
+    padding-top: 4rem;
+    z-index: 2;
+    width: available;
+
+    .contacts {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      text-align: right;
+      margin-bottom: 4rem;
+      padding: 0 10% 0 10%;
+
+      .contactInfo {
+        flex-grow: 1;
+        .title {
+          color: #3790E9;
+          font-weight: bold;
+          text-transform: uppercase;
+          font-size: 1.5em;
+        }
+        hr {
+            border: 1px solid #3790E9;
+        }
+
+        ul {
+          list-style-type: none;
+          overflow: hidden;
+          color: white;
+          font-size: 1.2em;
+
+          fa-icon {
+            color: #3790E9;
+            font-size: 2rem;
+          }
+        }
+      }
+
+      app-contact-form {
+        flex-grow: 2;
+      }
+    }
+
+    .footer {
+      hr {
+        border: 3px solid #3790E9;
+      }
+      .footerWrapper {
+        padding: 2rem 1rem 1rem 1rem;
+        display: flex;
+        flex-direction: row;
+        color: #787878;
+
+        .footerTitle{
+          text-transform: uppercase;
+          font-weight: bold;
+        }
+
+        ul {
+          display: flex;
+          flex-flow: row;
+          flex-wrap: wrap;
+          list-style-type: none;
+          padding: 0;
+          margin-bottom: 0;
+        }
+
+        a {
+          color: #787878;
+          text-decoration: none;
+        }
+        #siteMap>ul>li {
+          flex-basis: 50%;
+        }
+
+        #languages>ul>li{
+          flex-basis: 30%;
+        }
+
+        #address>ul>li {
+          flex-basis: 70%;
+        }
+
+        #copyright {
+          align-self: flex-end;
+          color: #3790E9;
+        }
+      }
+    }
+  }
+}
+
+
