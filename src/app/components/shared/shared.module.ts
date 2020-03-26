@@ -29,7 +29,10 @@ const components = [
     MatDialogModule,
     FontAwesomeModule
   ],
-  entryComponents: [QuoteModalComponent],
+  entryComponents: [
+    QuoteModalComponent,
+    InquiryPreviewComponent
+  ],
   exports: components,
 })
 export class SharedModule { }

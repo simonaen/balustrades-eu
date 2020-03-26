@@ -1,5 +1,10 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {MatDialog, MatDialogConfig} from '@angular/material';
+import {QuoteModalComponent} from '../quote-modal/quote-modal.component';
+import {InquiryPreviewComponent} from '../inquiry-preview/inquiry-preview.component';
+import {ContactForm} from '../../../../models/contact-form.model';
+import set = Reflect.set;
 
 @Component({
   selector: 'app-contact-form',
@@ -8,29 +13,45 @@ import {FormControl, FormGroup, Validators} from '@angular/forms';
 })
 export class ContactFormComponent implements OnInit {
   contactForm = new FormGroup({
-    Name: new FormControl('', [
+    name: new FormControl('', [
       Validators.required, Validators.minLength(4), Validators.maxLength(35)]
     ),
-    Email: new FormControl('', [
+    email: new FormControl('', [
       Validators.required, Validators.email]
     ),
-    Message: new FormControl('', [
+    message: new FormControl('', [
       Validators.required, Validators.minLength(4)]
     )
   });
 
-  constructor() {
+  @Output()
+  submitted: EventEmitter<boolean> = new EventEmitter<boolean>();
+
+  constructor(public matDialog: MatDialog) {
   }
 
   ngOnInit() {
   }
 
-  onSubmit() {
-    this.revert();
+  onSubmit(data: ContactForm) {
+    this.submitted.emit(true);
+    this.openModal(data);
   }
 
-  revert() {
-    this.contactForm.reset();
+  openModal(data: ContactForm) {
+    const dialogConfig = new MatDialogConfig();
+    // The user can't close the dialog by clicking outside its body
+    dialogConfig.disableClose = true;
+    dialogConfig.autoFocus = true;
+    dialogConfig.hasBackdrop = true;
+    dialogConfig.id = 'inquiry';
+    dialogConfig.height = '750';
+    dialogConfig.width = '900px';
+    dialogConfig.data = {
+      data
+    };
+    // https://material.angular.io/components/dialog/overview
+    const modalDialog = this.matDialog.open(InquiryPreviewComponent, dialogConfig);
   }
 
   get name() {

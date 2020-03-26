@@ -11,10 +11,11 @@ import {absoluteFrom} from '@angular/compiler-cli/src/ngtsc/file_system';
 export class ButtonComponent implements OnInit {
   @Input()
   text: string;
- @Input()
- transparent: boolean;
+  @Input()
+  transparent: boolean;
 
-  constructor(public matDialog: MatDialog) { }
+  constructor(public matDialog: MatDialog) {
+  }
 
   ngOnInit() {
   }

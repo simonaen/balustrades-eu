@@ -11,7 +11,7 @@ export class DropdownComponent implements OnInit {
   select: HTMLSelectElement;
 
   @Input()
-  data: Array<DropdownInterface>;
+  data: Array<DropdownModel>;
 
   onChange() {
     // Change localization

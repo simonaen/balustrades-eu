@@ -1,14 +1,14 @@
 <div class="contactForm">
-  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit(contactForm.value)">
     <label for="name">Имена:</label>
-    <input id="name" type="text" placeholder="Въведете името си тук" formControlName="Name">
+    <input id="name" type="text" placeholder="Въведете името си тук" formControlName="name">
 
     <label for="email">Електронна поща:</label>
-    <input id="email" type="text" placeholder="Въведете имейла си тук" formControlName="Email">
+    <input id="email" type="text" placeholder="Въведете имейла си тук" formControlName="email">
 
     <label for="message">Съобщение:</label>
     <textarea id="message" type="text" placeholder="Въведете съобщението си тук"
-              formControlName="Message"></textarea>
+              formControlName="message"></textarea>
 
     <input id="submit" type="submit" value="Изпрати" [disabled]="!contactForm.valid"
            [className]="contactForm.valid ? '' : 'disabled'">

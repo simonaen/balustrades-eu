@@ -41,7 +41,7 @@ span.close>fa-icon>svg[data-icon="plus"]:hover{
 }
 
 /*Overwrite MatDialog style*/
-mat-dialog-container#modal-component {
+mat-dialog-container#modal-component, mat-dialog-container#inquiry {
   background: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(10px);
   border-radius: 0.625rem;

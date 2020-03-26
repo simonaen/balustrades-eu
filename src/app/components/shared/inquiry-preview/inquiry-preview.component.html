@@ -1,0 +1,11 @@
+<div id="modalContentWrapper">
+  <header id="modalHeader">
+    <span class="close"><fa-icon (click)="closeModal()" [icon]="faClose" size="2x"></fa-icon> </span>
+    <h1 id="modalTitle">Вие изпратихте успешно своето съобщение!</h1>
+  </header>
+  <mat-dialog-content>
+    <span class="fieldName">Име:</span> <i>{{data.name}}</i>
+    <span class="fieldName">Електронна поща:</span> <i>{{data.email}}</i>
+    <span class="fieldName">Съобщение:</span> <i>{{data.message}}</i>
+  </mat-dialog-content>
+</div>
