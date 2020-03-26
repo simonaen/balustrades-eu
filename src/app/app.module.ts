@@ -4,8 +4,9 @@ import {NgModule} from '@angular/core';
 import {AppComponent} from './app.component';
 import {HeaderModule} from './components/header/header.module';
 import {FooterModule} from './components/footer/footer.module';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {SharedModule} from './components/shared/shared.module';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {ModalsModule} from './components/modals/modals.module';
+import {MainPointsModule} from './components/main-points/main-points.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import {SharedModule} from './components/shared/shared.module';
     HeaderModule,
     FooterModule,
     BrowserAnimationsModule,
-    SharedModule
+    ModalsModule,
+    MainPointsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
