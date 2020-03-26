@@ -1,4 +1,5 @@
 import {Component, Input, OnInit, ViewChild} from '@angular/core';
+import {DropdownModel} from '../../../../models/dropdown.model';
 
 @Component({
   selector: 'app-dropdown',

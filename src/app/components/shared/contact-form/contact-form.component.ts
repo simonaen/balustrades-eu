@@ -1,8 +1,8 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {MatDialog, MatDialogConfig} from '@angular/material';
-import {QuoteModalComponent} from '../quote-modal/quote-modal.component';
-import {InquiryPreviewComponent} from '../inquiry-preview/inquiry-preview.component';
+import {QuoteModalComponent} from '../../modals/quote-modal/quote-modal.component';
+import {InquiryPreviewComponent} from '../../modals/inquiry-preview/inquiry-preview.component';
 import {ContactForm} from '../../../../models/contact-form.model';
 import set = Reflect.set;
 

@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {MatDialog, MatDialogConfig} from '@angular/material';
-import {QuoteModalComponent} from '../quote-modal/quote-modal.component';
+import {QuoteModalComponent} from '../../modals/quote-modal/quote-modal.component';
 import {absoluteFrom} from '@angular/compiler-cli/src/ngtsc/file_system';
 
 @Component({
