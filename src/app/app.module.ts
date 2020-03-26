@@ -7,10 +7,12 @@ import {FooterModule} from './components/footer/footer.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {ModalsModule} from './components/modals/modals.module';
 import {MainPointsModule} from './components/main-points/main-points.module';
+import { AboutPreviewComponent } from './components/about-preview/about-preview.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AboutPreviewComponent
   ],
   imports: [
     BrowserModule,

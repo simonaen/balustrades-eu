@@ -1,0 +1,49 @@
+#aboutPreviewContainer{
+  display: flex;
+  position: inherit;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem;
+  box-sizing: border-box;
+
+  #leftSide{
+    padding: 1rem;
+    border-right: 1px solid #3790E9;
+    text-transform: uppercase;
+    text-align: right;
+    .title{
+      color: white;
+      font-size: 1.1em;
+      padding: 2rem;
+    }
+
+    #years {
+      padding: 0.5rem 3rem 0 3rem;
+      #yearsNumber{
+        font-size: 6em;
+        font-weight: bolder;
+        color: #C8E0F9;
+      }
+
+      #yearsText {
+        color: #3790E9;
+        text-align: right;
+        font-weight: bold;
+        display: block;
+        position: relative;
+        top: -3.7rem;
+        left: 1rem;
+      }
+    }
+  }
+
+  #rightSide{
+    padding: 3rem;
+    text-align: justify;
+    color: white;
+    max-width: 40%;
+    strong {
+      color: #3790E9;
+    }
+  }
+}
