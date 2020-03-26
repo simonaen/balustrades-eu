@@ -1,0 +1,12 @@
+<div id="modalContentWrapper">
+  <header id="modalHeader">
+    <span class="close"><fa-icon (click)="closeModal()" [icon]="faClose" size="2x"></fa-icon> </span>
+    <h1 id="modalTitle">Запитване за оферта</h1>
+  </header>
+  <mat-dialog-content>
+    <div id="instructions">
+      <p>Моля включете следните детайли в запитването си за оферта:</p>
+    </div>
+    <app-contact-form></app-contact-form>
+  </mat-dialog-content>
+</div>

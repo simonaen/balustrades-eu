@@ -1,0 +1,35 @@
+#modalContentWrapper {
+  width: 100%;
+  height: 100%;
+
+  .close {
+    display: block;
+    text-align: right;
+    fa-icon {
+      color: white;
+
+      svg {
+        transform: rotate(20deg);
+        -ms-transform: rotate(20deg);
+
+      }
+    }
+  }
+
+  #modalTitle {
+    padding: 0 3rem 0 3rem;
+    font-size: 22px;
+    color: white;
+    font-family: Lato;
+    text-transform: uppercase;
+  }
+
+  #instructions {
+    background-color: rgba(55,144,233,0.33);
+    margin: 0.5rem 1.7rem 0 3rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border-radius: 0.75em;
+    color: white;
+    font-family: "Open Sans";
+  }
+}

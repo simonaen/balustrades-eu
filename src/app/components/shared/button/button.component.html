@@ -1,1 +1,3 @@
-<button type="button" [className]="transparent ? 'transparent': ''"><span>{{text}}</span></button>
+<button type="button"
+        (click)="openModal()"
+        [className]="transparent ? 'transparent': ''">{{text}}</button>

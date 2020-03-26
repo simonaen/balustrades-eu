@@ -9,6 +9,7 @@ body {
   margin: 0;
   font-size: 0.8rem;
   background-color: #181818;
+  overflow-x: hidden;
 }
 
 h1  {
@@ -22,4 +23,26 @@ h2  {
 }
 hr {
   margin: 0
+}
+
+.container {
+  width: 100vw;
+}
+
+/*Overwrite close icon style*/
+span.close>fa-icon>svg[data-icon="plus"]{
+  transform: rotate(45deg);
+}
+
+span.close>fa-icon>svg[data-icon="plus"]:hover{
+  transition: all 0.3s linear;
+  transform: rotate(135deg);
+  color: #787878;
+}
+
+/*Overwrite MatDialog style*/
+mat-dialog-container#modal-component {
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  border-radius: 0.625rem;
 }

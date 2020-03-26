@@ -3,7 +3,9 @@ import {NgModule} from '@angular/core';
 
 import {AppComponent} from './app.component';
 import {HeaderModule} from './components/header/header.module';
-import { ButtonComponent } from './components/shared/button/button.component';
+import {FooterModule} from './components/footer/footer.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {SharedModule} from './components/shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -11,7 +13,10 @@ import { ButtonComponent } from './components/shared/button/button.component';
   ],
   imports: [
     BrowserModule,
-    HeaderModule
+    HeaderModule,
+    FooterModule,
+    BrowserAnimationsModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
