@@ -25,10 +25,6 @@ hr {
   margin: 0
 }
 
-.container {
-  width: 100vw;
-}
-
 /*Overwrite close icon style*/
 span.close>fa-icon>svg[data-icon="plus"]{
   transform: rotate(45deg);

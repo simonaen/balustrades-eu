@@ -1,0 +1,21 @@
+<div class="pItemContainer">
+  <div class="mainTextBox">
+    <h3>{{data[currentItemIndex].projectName}}</h3>
+    <h4>{{data[currentItemIndex].modelUsed}}</h4>
+    <span>Време на изпълнение:
+      <b>{{data[currentItemIndex].startDate.getMonth()}}/{{data[currentItemIndex].startDate.getFullYear()}} -
+        {{data[currentItemIndex].endDate.getMonth()}}/{{data[currentItemIndex].endDate.getFullYear()}}</b>
+    </span>
+  </div>
+  <div class="projectGallery">
+    <mdb-carousel [animation]="'fade'" class="carousel slide carousel-fade">
+      <mdb-carousel-item *ngFor="let image of data[currentItemIndex].images">
+        <img class="d-block w-100" src="{{image}}" alt="{{data[currentItemIndex].projectName}}">
+      </mdb-carousel-item>
+    </mdb-carousel>
+  </div>
+  <div class="nextProject" (click)="showNext()">
+    <span>Следващ проект</span>
+    <fa-icon [icon]="faArrow" size="2x"></fa-icon>
+  </div>
+</div>

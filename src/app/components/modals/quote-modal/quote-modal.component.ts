@@ -1,6 +1,7 @@
 import {Component, HostListener, OnInit} from '@angular/core';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import {MatDialogRef} from '@angular/material';
+
 @Component({
   selector: 'app-quote-modal',
   templateUrl: './quote-modal.component.html',

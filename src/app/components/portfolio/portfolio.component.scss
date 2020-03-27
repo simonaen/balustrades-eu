@@ -1,0 +1,48 @@
+.pItemContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 3rem 18rem;
+
+  .mainTextBox{
+    //text-align: right;
+    text-transform: uppercase;
+    color: white;
+    h3,h4 {
+      margin: 0;
+    }
+
+    h3,h4,b{
+      font-weight: 700;
+    }
+
+    h4 {
+      color: #3790E9;
+      font-size: 1em;
+    }
+  }
+
+  .projectGallery {
+    margin: 1rem 0;
+  }
+
+  .nextProject{
+    align-self: flex-end;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    transition: opacity 0.5s linear;
+    span {
+      margin-right: 0.6rem;
+      color: #3790E9;
+    }
+    fa-icon{
+      color: white;
+    }
+  }
+
+  .nextProject:hover {
+    opacity: 0.5;
+  }
+}
