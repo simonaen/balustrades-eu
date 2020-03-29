@@ -5,6 +5,7 @@
   justify-content: center;
   padding: 4rem;
   box-sizing: border-box;
+  visibility: hidden;
 
   #leftSide{
     padding: 1rem;
@@ -21,7 +22,7 @@
       padding: 0.5rem 3rem 0 3rem;
       #yearsNumber{
         font-size: 6em;
-        font-weight: bolder;
+        font-weight: 900;
         color: #C8E0F9;
       }
 

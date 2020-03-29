@@ -2,15 +2,6 @@
   margin: 2rem 0;
   box-sizing: border-box;
 
-
-  #decor {
-    margin-top: -31.5rem;
-    width: 56.25rem;
-    height: 31.5rem;
-    background-color: rgba(0, 0, 0, 0.75);
-    border-radius: 0 20rem 0 0;
-  }
-
   .wrapper{
     overflow-x: hidden;
     padding: 4rem 0;
@@ -21,6 +12,10 @@
     position: relative;
     left: auto;
     z-index: 1;
+
+    #leftImage, #rightImage{
+      visibility: hidden;
+    }
 
     #text {
       font-weight: bold;
@@ -34,6 +29,8 @@
       z-index: 2;
       position: relative;
       right: -5rem;
+      visibility: hidden;
+      animation-duration: 2s;
 
       a {
         color: white;
@@ -44,9 +41,20 @@
         }
       }
     }
+
+    #text:hover {
+      animation-name: moveRight;
+      animation-duration: 1s;
+    }
   }
 }
 
 img{
   border-radius: 0.4rem;
+}
+
+@keyframes moveRight {
+  0% { right: -5rem; }
+  50% { right: -7rem; }
+  100% { right: -5rem; }
 }

@@ -1,34 +1,38 @@
-#backgroundImage{
+#backgroundImage {
   background-image: url(../../../assets/mission_banner.png);
   background-size: cover;
   background-position-y: bottom;
   margin: 0 3rem 0 3rem;
-}
+  visibility: hidden;
+  //display: none;
 
-.pointsContainer{
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  padding: 2rem;
-  background: rgba(14, 14, 14, 0.53);
-  backdrop-filter: blur(15px);
+  .pointsContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 2rem;
+    background: rgba(14, 14, 14, 0.53);
+    backdrop-filter: blur(15px);
 
-  .pointWrapper {
-    padding: 3rem;
-    border-right: 2px solid #3790E9;
-    text-align: center;
+    .pointWrapper {
+      visibility: hidden;
+      //display: none;
+      padding: 3rem;
+      border-right: 2px solid #3790E9;
+      text-align: center;
 
-    strong{
-      text-transform: uppercase;
-      color: #3790E9;
+      strong {
+        text-transform: uppercase;
+        color: #3790E9;
+      }
+
+      p {
+        text-align: justify;
+        color: white;
+      }
     }
 
-    p {
-      text-align: justify;
-      color: white;
+    .pointWrapper:last-of-type {
+      border-right: none;
     }
-  }
-
-  .pointWrapper:last-of-type{
-    border-right: none;
   }
 }

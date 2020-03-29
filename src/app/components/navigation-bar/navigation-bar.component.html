@@ -1,4 +1,4 @@
-<nav class="navContainer">
+<nav [ngClass]="stickTop ? 'stickTop navContainer animated fadeInDown fast' : 'navContainer animated fadeInUp fast'">
   <div class="logo">
     <span>balustrades.<span class="accentText">EU</span></span>
   </div>
@@ -9,6 +9,6 @@
       <li><a href="">продукти</a></li>
       <li><a href="">за нас</a></li>
     </ul>
-    <app-button [text]="'Запитване за оферта'" [transparent]="true"></app-button>
+    <app-button #button [text]="'Запитване за оферта'" [transparent]="false" [ngClass]="pulse ? 'animated pulse' : ''"></app-button>
   </div>
 </nav>

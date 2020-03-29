@@ -4,6 +4,7 @@ import {HeaderComponent} from './header.component';
 import {ContactBarComponent} from '../contact-bar/contact-bar.component';
 import {SharedModule} from '../shared/shared.module';
 import {NavigationBarModule} from '../navigation-bar/navigation-bar.module';
+import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 
 const components = [
   HeaderComponent,
@@ -15,7 +16,8 @@ const components = [
   imports: [
     CommonModule,
     SharedModule,
-    NavigationBarModule
+    NavigationBarModule,
+    FontAwesomeModule
   ],
   exports: components
 })

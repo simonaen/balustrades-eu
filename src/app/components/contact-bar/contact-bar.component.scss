@@ -3,10 +3,20 @@ div {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  color: white;
   background-image: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0));
 
   span {
     margin: 1rem 1rem 1rem 0;
+    a {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    a:hover{
+      color: #3790E9;
+    }
+  }
+
+  #phoneNumber{
+    margin-right: 3rem;
   }
 }

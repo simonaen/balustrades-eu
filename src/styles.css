@@ -2,6 +2,8 @@
 
 * {
   font-family: "Open Sans", Lato, Montserrat;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
 }
 
 body {
@@ -10,6 +12,7 @@ body {
   font-size: 0.8rem;
   background-color: #181818;
   overflow-x: hidden;
+  transition: all 0.2s ease-in-out!important;
 }
 
 h1  {
@@ -41,4 +44,10 @@ mat-dialog-container#modal-component, mat-dialog-container#inquiry {
   background: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(10px);
   border-radius: 0.625rem;
+}
+
+/*Appearing style for all components*/
+.show {
+  visibility: visible!important;
+  transition: visibility 1s linear;
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -13,9 +13,25 @@ export class HeaderComponent implements OnInit {
     {value: 4, name: 'Русский'},
     {value: 5, name: 'Deutsch'},
     {value: 6, name: 'Italiano'}];
+
+  @ViewChild('container', {static: true})
+  container: ElementRef;
+
   constructor() { }
 
   ngOnInit() {
+    const observer = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting === true) {
+        setTimeout(() => {
+          this.container.nativeElement.classList.add('animated', 'fadeInDown');
+          this.container.nativeElement.classList.add('show');
+        }, 70);
+
+      }
+    }, { threshold: [0.11] });
+    setTimeout(() => {
+      observer.observe(this.container.nativeElement);
+    },  400);
   }
 
 }
