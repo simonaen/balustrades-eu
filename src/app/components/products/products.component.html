@@ -1,7 +1,12 @@
-<div class="prodContainer">
-  <div class="wrapper">
-    <div #img id="leftImage"><img src="../../../assets/mission_banner.png" alt=""></div>
-    <div #text id="text"> <a href="">Разгледайте <b>каталога</b> ни с продукти</a></div>
-    <div #img id="rightImage"><img src="../../../assets/mission_banner.png" alt=""></div>
+<section class="prodContainer">
+  <div #product class="text">
+    <h3>Каталог с модели</h3>
+    <p>Описание на каталога.</p>
   </div>
-</div>
+
+  <div class="products">
+    <div #product class="product" *ngFor="let i of [0,1,2,3,4]">
+      <app-picture-box [bgImage]="images[i]" [title]="titles[i]" [paragraph]="descrp[i]"></app-picture-box>
+    </div>
+  </div>
+</section>

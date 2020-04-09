@@ -1,7 +1,7 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {ProjectsModel} from '../../../models/projects.model';
 import {projects} from './projects-list';
-import {faArrowAltCircleRight} from '@fortawesome/free-solid-svg-icons';
+import {faLongArrowAltRight} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-portfolio',
@@ -11,7 +11,7 @@ import {faArrowAltCircleRight} from '@fortawesome/free-solid-svg-icons';
 export class PortfolioComponent implements OnInit {
   data: ProjectsModel[] = projects;
   currentItemIndex: number;
-  faArrow = faArrowAltCircleRight;
+  faArrow = faLongArrowAltRight;
   private executed = false;
 
   @ViewChild('container', {static: true})
@@ -25,7 +25,7 @@ export class PortfolioComponent implements OnInit {
     const observer = new IntersectionObserver((entries) => {
       if (entries[0].isIntersecting === true && this.executed === false) {
         setTimeout(() => {
-          this.container.nativeElement.classList.add('animated', 'fadeInDown');
+          this.container.nativeElement.classList.add('animated', 'fadeInUp');
           this.container.nativeElement.classList.add('show');
           this.executed = true;
         }, 70);

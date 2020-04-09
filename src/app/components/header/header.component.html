@@ -1,15 +1,19 @@
-<div class="containerHeader">
+<main class="containerHeader">
   <app-contact-bar></app-contact-bar>
-
+  <app-navigation-bar></app-navigation-bar>
   <div #container class="headerText">
-    <h1>ЕТ ”Цветомир Енев”</h1>
+    <h1>ЕТ Цветомир Енев</h1>
 <!--  </div>-->
-    <hr align="center">
+<!--    <hr align="center">-->
 <!--  <div class="headerText">-->
     <h2>Балюстради и балюстри от бял цимет</h2>
 <!--    <app-dropdown [data]="languages"></app-dropdown>-->
 <!--    <app-button [text]="'Запитване за оферта'" [transparent]="false"></app-button>-->
   </div>
+</main>
 
-  <app-navigation-bar></app-navigation-bar>
+<div  id="iconBoxes">
+  <div #iconBoxes *ngFor="let i of [0,1,2]">
+    <app-icon-box [icon]="faIcons[i]" [title]="titles[i]" [paragraph]="paragraphs[i]" [offsetIcon]="false"></app-icon-box>
+  </div>
 </div>

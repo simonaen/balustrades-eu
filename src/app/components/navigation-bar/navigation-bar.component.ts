@@ -1,5 +1,4 @@
-import {Component, HostListener, Input, OnDestroy, OnInit, ViewChild} from '@angular/core';
-import {ButtonComponent} from '../shared/button/button.component';
+import {Component, HostListener, OnDestroy, OnInit, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-navigation-bar',
@@ -16,11 +15,7 @@ export class NavigationBarComponent implements OnInit, OnDestroy {
 
   @HostListener('window:scroll')
   onScroll() {
-    if (window.scrollY.valueOf() >= (window.innerHeight.valueOf() * 0.85)) {
-      this.stickTop = true;
-    } else {
-      this.stickTop = false;
-    }
+    this.stickTop = window.scrollY.valueOf() >= (window.innerHeight.valueOf() * 0.05);
   }
 
   constructor() {

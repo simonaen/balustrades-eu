@@ -5,17 +5,19 @@ import {ButtonComponent} from './button/button.component';
 import {ContactFormComponent} from './contact-form/contact-form.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {InquiryPreviewComponent} from '../modals/inquiry-preview/inquiry-preview.component';
-import {QuoteModalComponent} from '../modals/quote-modal/quote-modal.component';
-import {MatDialogModule} from '@angular/material';
-import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import {BrowserModule} from '@angular/platform-browser';
-import {ModalsModule} from '../modals/modals.module';
+import {IconBoxComponent} from './icon-box/icon-box.component';
+import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
+import {PictureBoxComponent} from './picture-box/picture-box.component';
+import {TransitionBannerComponent} from './transition-banner/transition-banner.component';
 
 const components = [
   DropdownComponent,
   ButtonComponent,
-  ContactFormComponent
+  ContactFormComponent,
+  IconBoxComponent,
+  PictureBoxComponent,
+  TransitionBannerComponent
 ];
 
 @NgModule({
@@ -24,7 +26,8 @@ const components = [
     BrowserModule,
     CommonModule,
     BrowserAnimationsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FontAwesomeModule
   ],
   exports: components,
 })

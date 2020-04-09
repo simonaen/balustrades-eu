@@ -1,56 +1,72 @@
 <div class="containerFooter">
-  <div  class="wrapper">
-    <div #container class="contacts">
-      <div class="contactInfo">
-        <span class="title">Contact us</span>
+  <section class="wrapper">
+      <div #container class="contacts">
+        <div class="contactInfo">
+          <div class="contactInfoSection">
+            <fa-icon [icon]="icons[0]" class="sectionIcon"></fa-icon>
+            <div>
+              <span class="title">Телефон за връзка</span>
+              <ul>
+                <li><a href="tel:+359885557788">+359 88 555 77 88</a></li>
+                <li><a href="tel:+359885557788">+359 88 555 77 88</a></li>
+                <li><a href="tel:+359885557788">+359 88 555 77 88</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="contactInfoSection">
+            <fa-icon [icon]="icons[1]"  class="sectionIcon"></fa-icon>
+            <div>
+              <span class="title">Ел. поща</span>
+              <ul>
+                <li><a href="mailto:contact@balustrades.eu">contact@balustrades.eu</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="contactInfoSection">
+            <fa-icon [icon]="icons[2]"  class="sectionIcon"></fa-icon>
+            <div>
+              <span class="title">Социални мрежи</span>
+              <ul>
+                <li><a href="">
+                  <fa-icon [icon]="faFacebook"></fa-icon>
+                </a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <app-contact-form></app-contact-form>
+      </div>
+  </section>
+  <footer class="footer">
+    <div class="footerWrapper">
+      <div id="siteMap">
+        <span class="footerTitle">Карта на сайта</span>
         <ul>
-          <li><a href="tel:+359885557788">+359 88 555 77 88</a></li>
-          <li><a href="tel:+359885557788">+359 88 555 77 88</a></li>
-          <li><a href="tel:+359885557788">+359 88 555 77 88</a></li>
-        </ul>
-        <hr>
-        <ul>
-          <li><a href="mailto:beton_cast@abv.bg">beton_cast@abv.bg</a></li>
-          <li><a href="">
-            <fa-icon [icon]="faFacebook"></fa-icon>
-          </a></li>
+          <li><a href="">Начална страница</a></li>
+          <li><a href="">Продукти</a></li>
+          <li><a href="">Проекти</a></li>
+          <li><a href="">За нас</a></li>
         </ul>
       </div>
-      <app-contact-form></app-contact-form>
-    </div>
-
-    <div class="footer">
-      <hr>
-      <div class="footerWrapper">
-        <div id="siteMap">
-          <span class="footerTitle">Карта на сайта</span>
-          <ul>
-            <li><a href="">Начална страница</a></li>
-            <li><a href="">Продукти</a></li>
-            <li><a href="">Проекти</a></li>
-            <li><a href="">За нас</a></li>
-          </ul>
-        </div>
-        <div id="languages">
-          <span class="footerTitle">Език</span>
-          <ul>
-            <li><a href="">Български</a></li>
-            <li><a href="">English</a></li>
-            <li><a href="">Français</a></li>
-            <li><a href="">Русский</a></li>
-            <li><a href="">Italiano</a></li>
-          </ul>
-        </div>
-        <div id="address">
-          <span class="footerTitle">Адрес</span>
-          <ul>
-            <li>гр. Левски, 5900</li>
-            <li>Производствена база "Бившо" ОКС</li>
-          </ul>
-        </div>
-        <div id="copyright"><span>© 2020 Balustrades.EU</span></div>
-
+      <div id="languages">
+        <span class="footerTitle">Език</span>
+        <ul>
+          <li><a href="">Български</a></li>
+          <li><a href="">English</a></li>
+          <li><a href="">Français</a></li>
+          <li><a href="">Русский</a></li>
+          <li><a href="">Italiano</a></li>
+        </ul>
       </div>
+      <div id="address">
+        <span class="footerTitle">Адрес</span>
+        <ul>
+          <li>гр. Левски, 5900</li>
+          <li>Производствена база "Бившо" ОКС</li>
+        </ul>
+      </div>
+      <div id="copyright"><span>© 2020 Balustrades.EU</span></div>
+
     </div>
-  </div>
+  </footer>
 </div>

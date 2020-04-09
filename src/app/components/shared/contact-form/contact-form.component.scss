@@ -1,12 +1,21 @@
 .contactForm{
-  padding: 0 3rem 0 3rem;
 
   form {
     display: flex;
     flex-direction: column;
     text-align: left;
-    color: white;
-    font-family: Lato;
+    color: #7DA2A9;
+    font-family: Lato, sans-serif;
+
+    .firstRow {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      div{
+        min-width: 49%;
+      }
+    }
 
     label {
       margin: 0.5rem 0 0.3rem 0;
@@ -22,9 +31,9 @@
 
     input, textarea {
       outline: none;
-      color: white;
-      background: rgba(109, 109, 109, 0.2);
-      border: 1px solid #FFFFFF;
+      color: #1D2228;
+      background: #FFFFFF;
+      border: 1px solid #7DA2A9;
       backdrop-filter: blur(10px) opacity(0.5);
       border-radius: 2px;
       padding: 0.5rem;
@@ -50,7 +59,7 @@
     }
 
     textarea::-webkit-scrollbar-thumb {
-      background-color: #3790E9;
+      background-color: #7DA2A9;
       outline: 1px solid slategrey;
     }
 
@@ -58,13 +67,14 @@
       cursor: pointer;
       width: fit-content;
       text-transform: uppercase;
-      color: #3790E9;
+      color: #7DA2A9;
       font-weight: bold;
       margin: 1rem 0 0 0;
     }
 
     #submit.disabled {
-      color: rgba(255, 255, 255, 0.2);
+      border-color: rgba(0, 0, 0, 0.1);
+      color: rgba(0, 0, 0, 0.2);
       cursor: auto;
     }
   }

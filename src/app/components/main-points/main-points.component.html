@@ -1,24 +1,9 @@
-<div #bg id="backgroundImage">
+<section id="mainContainer">
+  <h3>Процес на работа</h3>
+  <p>Описание на процеса на работа и стъпките, от които е съставен.</p>
   <div class="pointsContainer">
-    <div #points class="pointWrapper">
-      <strong>Планираме</strong>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-    </div>
-    <div #points class="pointWrapper">
-      <strong>Планираме</strong>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-    </div>
-    <div #points class="pointWrapper">
-      <strong>Планираме</strong>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-    </div>
-    <div #points class="pointWrapper">
-      <strong>Планираме</strong>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+    <div #points *ngFor="let i of [0,1,2,3]">
+      <app-icon-box #points [icon]="icons[i]" [title]="titles[i]" [paragraph]="paragraphs[i]" [offsetIcon]="true"></app-icon-box>
     </div>
   </div>
-</div>
+</section>

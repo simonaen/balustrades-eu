@@ -1,16 +1,24 @@
-mat-dialog-content{
+mat-dialog-content {
   padding: 3rem;
 
   span {
     display: block;
   }
 
-  i{
-    color: white;
+  i {
+    color: #1D2228;
   }
+
   .fieldName {
-    color: #3790E9;
+    color: #7DA2A9;
     font-weight: bold;
   }
+
+}
+
+footer {
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: flex-end;
 }
 

@@ -22,13 +22,13 @@ export class AboutPreviewComponent implements OnInit {
       if (entries[0].isIntersecting === true && this.executed === false) {
         setTimeout(() => {
           this.yearsCounter(0, this.yearsExperience, 2000);
-          this.container.nativeElement.classList.add('animated', 'fadeInDown');
+          this.container.nativeElement.classList.add('animated', 'slideInUp');
           this.container.nativeElement.classList.add('show');
           this.executed = true;
         }, 70);
 
       }
-    }, { threshold: [0.11] });
+    }, { threshold: [0.35] });
 
     observer.observe(document.querySelector('#aboutPreviewContainer'));
   }

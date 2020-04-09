@@ -1,7 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {MatDialog, MatDialogConfig} from '@angular/material';
 import {QuoteModalComponent} from '../../modals/quote-modal/quote-modal.component';
-import {absoluteFrom} from '@angular/compiler-cli/src/ngtsc/file_system';
 
 @Component({
   selector: 'app-button',
@@ -18,6 +17,11 @@ export class ButtonComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  scrollTo() {
+    const elmnt = document.getElementById('contact');
+    elmnt.scrollIntoView();
   }
 
   openModal() {

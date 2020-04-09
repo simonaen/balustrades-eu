@@ -1,5 +1,5 @@
-import {AfterViewInit, Component, ContentChildren, ElementRef, OnInit, QueryList, Renderer2, ViewChild, ViewChildren} from '@angular/core';
-import {log} from 'util';
+import {AfterViewInit, Component, ElementRef, QueryList, Renderer2, ViewChildren} from '@angular/core';
+import {faHardHat, faMagic, faPencilRuler, faTruckLoading} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-main-points',
@@ -9,9 +9,14 @@ import {log} from 'util';
 export class MainPointsComponent implements AfterViewInit {
   public executed = false;
   public observer: IntersectionObserver;
-
-  @ViewChild('bg', {static: true})
-  background: ElementRef;
+  public icons = [faPencilRuler, faMagic, faTruckLoading, faHardHat];
+  public titles = ['Планираме', 'Изработваме', 'Транспортираме', 'Монтираме'];
+  public paragraphs = [
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'
+  ];
 
   @ViewChildren('points', {read: ElementRef})
   points: QueryList<ElementRef>;
@@ -20,12 +25,10 @@ export class MainPointsComponent implements AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    this.points.reset([this.background, ...this.points.toArray()]);
-
     this.points.forEach((point, index) => {
       setTimeout(() => {
         this.observer.observe(point.nativeElement);
-      },  500 * index);
+      },  425 * index);
     });
 
     this.observer = new IntersectionObserver((entries) => {
@@ -33,7 +36,7 @@ export class MainPointsComponent implements AfterViewInit {
         entries.forEach((entry: any) => {
           if (entry.isIntersecting === true) {
             this.renderer.addClass(entry.target, 'animated');
-            this.renderer.addClass(entry.target, 'fadeInDown');
+            this.renderer.addClass(entry.target, 'fadeInUp');
             this.renderer.addClass(entry.target, 'show');
           }
         });

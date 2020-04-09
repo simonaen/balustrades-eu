@@ -1,10 +1,18 @@
 <div class="contactForm">
   <form [formGroup]="contactForm" (ngSubmit)="onSubmit(contactForm.value)">
-    <label for="name">Имена:</label>
-    <input id="name" type="text" placeholder="Въведете името си тук" formControlName="name">
+    <div class="firstRow">
+      <div>
+        <label for="name">Имена:</label>
+        <input id="name" type="text" placeholder="Въведете името си тук" formControlName="name">
+      </div>
+      <div>
+        <label for="email">Електронна поща:</label>
+        <input id="email" type="text" placeholder="Въведете имейла си тук" formControlName="email">
+      </div>
+    </div>
 
-    <label for="email">Електронна поща:</label>
-    <input id="email" type="text" placeholder="Въведете имейла си тук" formControlName="email">
+    <label for="subject">Тема на съобщението:</label>
+    <input id="subject" type="text" placeholder="Въведете тема на съобщението си" formControlName="subject">
 
     <label for="message">Съобщение:</label>
     <textarea id="message" type="text" placeholder="Въведете съобщението си тук"

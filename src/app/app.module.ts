@@ -10,6 +10,7 @@ import {MainPointsModule} from './components/main-points/main-points.module';
 import {AboutPreviewComponent} from './components/about-preview/about-preview.component';
 import {ProductsComponent} from './components/products/products.component';
 import {PortfolioModule} from './components/portfolio/portfolio.module';
+import {SharedModule} from './components/shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -17,15 +18,16 @@ import {PortfolioModule} from './components/portfolio/portfolio.module';
     AboutPreviewComponent,
     ProductsComponent
   ],
-  imports: [
-    BrowserModule,
-    HeaderModule,
-    FooterModule,
-    BrowserAnimationsModule,
-    ModalsModule,
-    MainPointsModule,
-    PortfolioModule
-  ],
+    imports: [
+        BrowserModule,
+        HeaderModule,
+        FooterModule,
+        BrowserAnimationsModule,
+        ModalsModule,
+        MainPointsModule,
+        PortfolioModule,
+        SharedModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

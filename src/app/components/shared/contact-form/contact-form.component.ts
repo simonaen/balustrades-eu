@@ -1,10 +1,8 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {MatDialog, MatDialogConfig} from '@angular/material';
-import {QuoteModalComponent} from '../../modals/quote-modal/quote-modal.component';
 import {InquiryPreviewComponent} from '../../modals/inquiry-preview/inquiry-preview.component';
 import {ContactForm} from '../../../../models/contact-form.model';
-import set = Reflect.set;
 
 @Component({
   selector: 'app-contact-form',
@@ -18,6 +16,9 @@ export class ContactFormComponent implements OnInit {
     ),
     email: new FormControl('', [
       Validators.required, Validators.email]
+    ),
+    subject: new FormControl('', [
+      Validators.required, Validators.minLength(4)]
     ),
     message: new FormControl('', [
       Validators.required, Validators.minLength(4)]
@@ -41,7 +42,7 @@ export class ContactFormComponent implements OnInit {
   openModal(data: ContactForm) {
     const dialogConfig = new MatDialogConfig();
     // The user can't close the dialog by clicking outside its body
-    dialogConfig.disableClose = true;
+    dialogConfig.disableClose = false;
     dialogConfig.autoFocus = true;
     dialogConfig.hasBackdrop = true;
     dialogConfig.id = 'inquiry';

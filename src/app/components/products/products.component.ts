@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, ContentChildren, ElementRef, OnInit, QueryList, Renderer2, ViewChild, ViewChildren} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, QueryList, Renderer2, ViewChildren} from '@angular/core';
 
 @Component({
   selector: 'app-products',
@@ -9,47 +9,41 @@ export class ProductsComponent implements AfterViewInit {
   private executed = false;
   public observer: IntersectionObserver;
 
-  @ViewChildren('img')
-  items: QueryList<ElementRef>;
+  public images = ['/assets/mission_banner.png', '/assets/mission_banner.png',
+    '/assets/mission_banner.png', '/assets/mission_banner.png', '/assets/mission_banner.png'];
+  public titles = ['Модел 1', 'Модел 2', 'Модел 3', 'Модел 4', 'Модел 5'];
+  public descrp = [
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'
+  ];
 
-  @ViewChild('text', {static: true})
-  text: ElementRef;
+  @ViewChildren('product')
+  items: QueryList<ElementRef>;
 
   constructor(private renderer: Renderer2) {
   }
 
   ngAfterViewInit() {
-    this.items.reset([...this.items.toArray(), this.text]);
-
     this.observer = new IntersectionObserver((entries) => {
       if (!this.executed) {
         entries.forEach((entry: any) => {
-          console.log(entry);
           if (entry.isIntersecting === true) {
-            if (entry.target.id === 'text') {
               this.renderer.addClass(entry.target, 'animated');
-              this.renderer.addClass(entry.target, 'slideInLeft');
+              this.renderer.addClass(entry.target, 'slideInUp');
               this.renderer.addClass(entry.target, 'show');
-            } else {
-              this.renderer.addClass(entry.target, 'animated');
-              this.renderer.addClass(entry.target, 'fadeIn');
-              this.renderer.addClass(entry.target, 'show');
-            }
           }
         });
       }
-    }, {threshold: [0.11]});
+    }, {threshold: [0.15]});
 
     this.items.forEach((item, index) => {
       setTimeout(() => {
         this.observer.observe(item.nativeElement);
-      }, 350 * index);
+      }, 450 * index);
     });
-
-    setTimeout(() => {
-      this.renderer.removeClass(this.text.nativeElement, 'animated');
-      this.renderer.removeClass(this.text.nativeElement, 'slideInLeft');
-    }, 2500);
   }
 
 }

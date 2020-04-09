@@ -1,4 +1,4 @@
-<div #container class="pItemContainer">
+<section #container class="pItemContainer">
   <div class="mainTextBox">
     <h3>{{data[currentItemIndex].projectName}}</h3>
     <h4>{{data[currentItemIndex].modelUsed}}</h4>
@@ -16,6 +16,6 @@
   </div>
   <div class="nextProject" (click)="showNext()">
     <span>Следващ проект</span>
-    <fa-icon [icon]="faArrow" size="2x"></fa-icon>
+    <fa-icon [icon]="faArrow"></fa-icon>
   </div>
-</div>
+</section>

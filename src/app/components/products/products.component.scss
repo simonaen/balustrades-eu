@@ -1,60 +1,26 @@
 .prodContainer {
-  margin: 2rem 0;
-  box-sizing: border-box;
+  padding: 7rem 7rem;
+  margin: 4rem 0;
+  background-color: #eef3f4;
 
-  .wrapper{
-    overflow-x: hidden;
-    padding: 4rem 0;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-end;
-    position: relative;
-    left: auto;
-    z-index: 1;
-
-    #leftImage, #rightImage{
-      visibility: hidden;
-    }
-
-    #text {
-      font-weight: bold;
-      text-transform: uppercase;
-      text-align: right;
-      font-size: 1.5em;
-      background: rgba(0, 0, 0, 0.25);
-      backdrop-filter: blur(30px);
-      border-radius: 1rem;
-      padding: 1.5rem 2rem;
-      z-index: 2;
-      position: relative;
-      right: -5rem;
-      visibility: hidden;
-      animation-duration: 2s;
-
-      a {
-        color: white;
-        text-decoration: #3790E9;
-
-        b {
-          color: #3790E9;
-        }
-      }
-    }
-
-    #text:hover {
-      animation-name: moveRight;
-      animation-duration: 1s;
+  .text {
+    h3 {
+      font-weight: 600;
     }
   }
-}
 
-img{
-  border-radius: 0.4rem;
-}
+  .products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1rem;
+    row-gap: 1rem;
+    justify-items: center;
+    align-items: center;
 
-@keyframes moveRight {
-  0% { right: -5rem; }
-  50% { right: -7rem; }
-  100% { right: -5rem; }
+    .product {
+      visibility: hidden;
+    }
+  }
+
+
 }

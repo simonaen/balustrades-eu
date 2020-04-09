@@ -1,0 +1,23 @@
+.bannerWrapper {
+  background-color: #1D2228;
+  margin: 6rem 0;
+  position: relative;
+}
+
+.bannerContainer {
+  width: 100%;
+  min-height: 40vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: center;
+  opacity: 0.6;
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+  }
+}
+

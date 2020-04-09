@@ -9,7 +9,8 @@ import {SharedModule} from '../shared/shared.module';
   declarations: [NavigationBarComponent],
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+
   ],
   exports: [NavigationBarComponent]
 })
