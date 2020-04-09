@@ -4,6 +4,7 @@
   background-image: url(../../../assets/Header.png);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position-x: center;
   display: flex;
   flex-direction: column;
   align-content: space-between;
@@ -52,10 +53,9 @@
 }
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 769px) {
   .containerHeader {
     height: 100vh;
-    background-position-x: center;
     app-contact-bar{
       display: none;
     }

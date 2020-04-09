@@ -173,3 +173,30 @@ fa-icon, span, a, fa-icon:hover, span:hover, a:hover {
   }
 
 }
+
+@media only screen and (max-width: 910px) {
+  .wrapper{
+    padding: 4rem 0!important;
+
+    .contactInfo {
+      flex-direction: column!important;
+
+      .contactInfoSection:not(:first-of-type){
+        margin-top: 1.5rem;
+      }
+    }
+  }
+
+  .footerWrapper {
+    padding: 1.5rem!important;
+
+    div:not(:first-of-type){
+      margin-top: 1.3rem;
+    }
+
+    #copyright {
+      align-self: flex-start!important;
+    }
+  }
+
+}
