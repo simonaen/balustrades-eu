@@ -50,3 +50,31 @@
     visibility: hidden;
   }
 }
+
+
+@media only screen and (max-width: 600px) {
+  .containerHeader {
+    height: 100vh;
+    background-position-x: center;
+    app-contact-bar{
+      display: none;
+    }
+
+    .headerText{
+      padding: 1.5rem;
+      h1 {
+        font-size: 2.6em;
+      }
+
+      h2 {
+        font-size: 1.6em;
+      }
+    }
+  }
+
+  #iconBoxes{
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+}

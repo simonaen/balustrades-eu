@@ -37,8 +37,8 @@
 }
 
 
-@media (min-width: 1200px){
+@media only screen and (max-width: 600px) {
   .boxContainer{
-    margin-top: 1.5rem;
+    margin: 1.5rem auto;
   }
 }

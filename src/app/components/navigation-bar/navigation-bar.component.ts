@@ -1,4 +1,5 @@
 import {Component, HostListener, OnDestroy, OnInit, ViewChild} from '@angular/core';
+import {BreakpointObserver} from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-navigation-bar',
@@ -6,9 +7,12 @@ import {Component, HostListener, OnDestroy, OnInit, ViewChild} from '@angular/co
   styleUrls: ['./navigation-bar.component.scss']
 })
 export class NavigationBarComponent implements OnInit, OnDestroy {
-  stickTop: boolean;
-  pulse = true;
-  interval;
+  public stickTop: boolean;
+  public pulse = true;
+  public interval;
+  public isSmallScreen: boolean;
+  public mobileNavItems = ['Начало', 'За нас', 'Услуги', 'Модели', 'Проекти', 'Контакти'];
+  public mobileNavRefs = ['#landing', '#about', '#services', '#catalog', '#portfolio', '#contact'];
 
   @ViewChild('button', {static: true})
   button;
@@ -18,7 +22,8 @@ export class NavigationBarComponent implements OnInit, OnDestroy {
     this.stickTop = window.scrollY.valueOf() >= (window.innerHeight.valueOf() * 0.05);
   }
 
-  constructor() {
+  constructor(breakpointObserver: BreakpointObserver) {
+    this.isSmallScreen = breakpointObserver.isMatched('(max-width: 599px)');
     this.interval = setInterval(() => {
       this.pulse = false;
       setTimeout(() => {
@@ -33,5 +38,4 @@ export class NavigationBarComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     clearInterval(this.interval);
   }
-
 }

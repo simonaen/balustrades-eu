@@ -49,3 +49,11 @@
     opacity: 0.5;
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .pItemContainer{
+    margin: 0;
+    padding: 8rem 1.5rem;
+  }
+
+}

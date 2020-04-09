@@ -56,3 +56,14 @@
   z-index: 20;
   transition: all 0.4s linear;
 }
+
+@media only screen and (max-width: 600px) {
+  .navContainer {
+    padding: 1rem;
+  }
+
+  a.mat-menu-item:last-of-type {
+    background-color: #7DA2A9;
+    color: #FFFFFF;
+  }
+}

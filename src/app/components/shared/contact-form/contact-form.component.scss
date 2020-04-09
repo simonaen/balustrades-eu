@@ -79,3 +79,10 @@
     }
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .firstRow div{
+    min-width: 100%!important;
+  }
+
+}

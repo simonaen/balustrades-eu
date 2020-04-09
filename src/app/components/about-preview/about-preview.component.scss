@@ -30,10 +30,14 @@
         color: #1D2228;
         text-align: right;
         font-weight: bold;
-        display: block;
+        display: flex;
+        flex-direction: column;
         position: relative;
         top: -5rem;
         left: 1rem;
+        span {
+          text-transform: uppercase;
+        }
       }
     }
   }
@@ -57,4 +61,33 @@
       color: #7DA2A9;
     }
   }
+}
+
+@media only screen and (max-width: 600px) {
+  #aboutPreviewContainer{
+    padding: 3rem 1.5rem;
+    display: block;
+    #leftSide{
+      //display: none;
+      border-right: none;
+      text-align: center;
+      #years {
+        padding: 0;
+      }
+      #yearsText {
+        flex-direction: row!important;
+        top: -2rem!important;
+        left: 35%!important;
+        text-align: center!important;
+        span:first-of-type {
+          margin-right: 0.5rem;
+        }
+      }
+    }
+    #rightSide{
+      max-width: 100%;
+      padding: 0;
+    }
+  }
+
 }

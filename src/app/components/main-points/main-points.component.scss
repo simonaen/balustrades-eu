@@ -1,9 +1,10 @@
-#mainContainer{
+#mainContainer {
   padding: 7rem 7rem;
 
-  h3{
+  h3 {
     font-weight: 600;
   }
+
   .pointsContainer {
     display: flex;
     flex-direction: row;
@@ -15,4 +16,19 @@
     }
   }
 
+}
+
+@media only screen and (max-width: 600px) {
+  #mainContainer {
+    padding: 1rem 0;
+
+    h3, p {
+      margin: 0 1.5rem;
+    }
+    .pointsContainer {
+      flex-direction: column !important;
+      padding: 0;
+      margin: 1rem 0;
+    }
+  }
 }
