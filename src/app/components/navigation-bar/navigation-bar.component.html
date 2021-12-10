@@ -11,7 +11,9 @@
       <li><a href="#catalog">Модели</a></li>
       <li><a href="#portfolio">Проекти</a></li>
     </ul>
-    <app-button #button [text]="'Запитване за оферта'" [transparent]="false"
+    <app-button #button [text]="'Запитване за оферта'" 
+                [transparent]="false"
+                [scrollToElId]="'contact'"
                 [ngClass]="pulse ? 'animated pulse' : ''"></app-button>
   </div>
 

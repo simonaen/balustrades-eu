@@ -12,6 +12,8 @@ export class ButtonComponent implements OnInit {
   text: string;
   @Input()
   transparent: boolean;
+  @Input()
+  scrollToElId: string;
 
   constructor(public matDialog: MatDialog) {
   }
@@ -20,8 +22,7 @@ export class ButtonComponent implements OnInit {
   }
 
   scrollTo() {
-    const elmnt = document.getElementById('contact');
-    elmnt.scrollIntoView();
+    window.open(`/#${this.scrollToElId}`, '_self')
   }
 
   openModal() {
